@@ -1,0 +1,106 @@
+:root {
+  --clr-primary: hsl(229, 86%, 12%);
+  --clr-accent: #ef972c;
+
+  --fs-700: 3.5rem;
+  --fs-400: 1.25rem;
+  --padding-inline: 1rem;
+  --wrapper-max-width: 50rem;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  padding: 0;
+}
+html {
+  color-scheme: dark;
+}
+
+body {
+  font-family: system-ui;
+  font-size: 2.25rem;
+  display: grid;
+  min-block-size: 100dvh;
+  place-content: center;
+}
+
+nav ul {
+  --_gap: 2rem;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav a {
+  color: inherit;
+  opacity: 0.7;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+nav a:hover,
+nav a:focus-visible {
+  opacity: 1;
+}
+
+nav li {
+  overflow: hidden;
+  position: relative;
+  padding: calc(var(--_gap) / 2);
+  min-inline-size: 3rem;
+}
+
+nav li::after {
+  content: "";
+  position: absolute;
+  inset-inline: 0;
+  inset-block-end: 0;
+  block-size: 3px;
+  background-color: orangered;
+
+  translate: var(--_translate, 0);
+  scale: var(--_scale, 0) 1;
+  transition: scale 100ms var(--_scale-delay, 0ms), translate 200ms;
+}
+
+/* A previous sibling is hovered */
+nav li:hover ~ li {
+  --_translate: -100%;
+  --_scale-delay: 200ms;
+}
+
+/* Any other sibling is hovered */
+nav:hover li {
+  --_translate: 50%;
+  --_scale-delay: 100ms;
+}
+
+/*
+  The actually hovered <li>
+
+  NOTE: same specificity as previous selector, so it must either come after or be artificially inflated (eg. :hover:hover)
+*/
+nav li:hover {
+  --_scale: 1;
+  --_translate: 0;
+  --_scale-delay: 0ms;
+}
