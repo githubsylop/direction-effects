@@ -1,0 +1,58 @@
+li.previous {
+  color: green;
+}
+/* .previous + .dupa{
+  color: red;
+} */
+
+/* .previous:has(+ li) {
+ color:yellow
+} */
+.dupa:has(~ .previous) {
+  color: yellow;
+}
+
+.box:has(~ .circle) {
+  width: 40px;
+  height: 40px;
+}
+
+.box {
+  width: 20px;
+  height: 20px;
+  border: 1px solid black;
+}
+
+.circle {
+  border: 1px solid;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+.circles {
+  border: 1px solid red;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+.box:has(~ .circle) {
+  width: 40px;
+  height: 40px;
+  border-color: red;
+}
+.circle + .box {
+  width: 80px;
+  height: 80px;
+}
+.circle ~ .box:has(~ .box) {
+  width: 80px;
+  height: 80px;
+  border-color: blue;
+}
+/* .box + .box {
+  width: 80px;
+  height: 80px;
+  border-color: blue;
+} */
