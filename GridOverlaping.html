@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Copied layout for Caleb</title>
+    <link rel="stylesheet" href="GridOverlaping.css" />
+    <script type="module" defer>
+      const text = await Promise.resolve("Hey there");
+      console.log("outside: " + text ,String.fromCharCode(88,83,83));
+      const url = window.location.href
+      const conten =   "<a onclick='https://client.dev.outmin.io/documents?serach=javascript:alert(`Good for you, clicking on links!`)'>here</a>"
+      const a = document.getElementsByClassName('text')
+      console.log(a);
+      a[0].innerHTML=conten
+    </script>
+  </head>
+
+  <body>
+    <div class="testimonial">
+      <!-- <script>alert('This is an XSS attack')</script> -->
+        <img
+          src="https://images.unsplash.com/photo-1605287977617-ddd865d5f696?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2OTYzMzYxODV8&ixlib=rb-4.0.3&q=80&w=400"
+          alt=""
+        />
+        <a href="?serach=javascript:alert(`Good for you, clicking on links!`)" >XXX</a>
+        <div class="text">
+          <h3 class="product__title">Stuffed hamster</h3>
+          <p class="product__description">
+            A nice fuzzy and cuddly stuffed hamster for you to snuggle with
+            and enjoy. Might be small in size, but it isn't small in cuteness.
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus ipsum rem laboriosam! Adipisci, est incidunt labore pariatur, consequuntur nesciunt dolore neque 
+            vero accusantium, blanditiis magnam consectetur dolorum dolor laboriosam id.
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam eligendi sunt magnam beatae ipsum nesciunt dolorem dolores aut quia et veniam quaerat,
+             neque minima architecto aliquid, ut reprehenderit! Veniam, reiciendis beatae eveniet quaerat cumque officia excepturi id autem, laborum odit dicta ullam! 
+             Fugiat voluptatibus eum impedit praesentium tempora amet itaque doloribus adipisci. Sed laudantium, molestias deleniti commodi expedita quae ad? Laboriosam ratione
+              dicta non labore ab, molestiae officia, quas voluptatem culpa assumenda nam possimus doloribus adipisci ad fugit, reprehenderit tempore cum sed eos voluptates impedit 
+              ea? Aspernatur commodi facere dignissimos, dolor est laboriosam nihil omnis rerum, veniam veritatis eos incidunt!
+          </p>
+        </div>
+  </body>
+
+</html>
+
+<!-- https://www.youtube.com/watch?v=yuzggllFaC0 -->

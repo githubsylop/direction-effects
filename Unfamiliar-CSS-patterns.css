@@ -1,0 +1,62 @@
+:root {
+  --sidebar-size: 250px;
+  --main-min-width: 750px;
+  --gap: 2rem;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui;
+  font-size: 2.25rem;
+  display: grid;
+  min-block-size: 100dvh;
+  place-content: center;
+  background-color: bisque;
+}
+
+.wrapper {
+  width: min(1160px, 100% - 4rem);
+  margin-inline: auto;
+  background-color: aqua;
+}
+
+.main-with-sidebar {
+  display: flex;
+  gap: var(--gap);
+  flex-wrap: wrap;
+}
+
+.main-with-sidebar > * {
+  flex-grow: 1;
+}
+
+.main-with-sidebar > main {
+  flex-grow: 999;
+  flex-basis: calc(
+    ((var(--main-min-width) - (100% - var(--sidebar-size) - var(--gap)))) * 9999
+  );
+}
+.main-with-sidebar > aside {
+  flex-basis: var(--sidebar-size);
+}

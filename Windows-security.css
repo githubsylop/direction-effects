@@ -42,11 +42,48 @@ p {
   width: 55px;
 }
 
+.card {
+  /* background-attachment: fixed; */
+  /* background-image: radial-gradient(
+    circle at var(--x, 0) var(--y, 0),
+    hsl(0 0% 100% / 0.175),
+    hsl(0 0% 100% / 0.0125) 10rem
+  ); */
+}
+
 .card:hover {
   background-attachment: fixed;
   background-image: radial-gradient(
     circle at var(--x, 0) var(--y, 0),
     hsl(0 0% 100% / 0.175),
-    hsl(0 0% 100% / 0.0125) 10rem
+    hsl(0 0% 100% / 0.0125) 20rem
   );
 }
+
+.card::after {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  background-attachment: fixed;
+  background-image: radial-gradient(
+    circle at var(--x, 0) var(--y, 0),
+    hsl(0 0% 100% / 0.75),
+    transparent 5rem
+  );
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* .grid-container {
+  margin-block-start: 3rem;
+  display: grid;
+  grid-template-areas: "a";
+}
+
+.grid-container > * {
+  grid-area: a;
+}
+
+.grid-container .border {
+  border: 1px solid white;
+} */

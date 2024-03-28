@@ -4,6 +4,7 @@ const grid = document.querySelector(".grid");
 // const gridSize = grid.getBoundingClientRect();
 
 document.addEventListener("mousemove", (e) => {
+  console.log(e.x, e.y);
   grid.style.setProperty("--x", e.x + "px");
   grid.style.setProperty("--y", e.y + "px");
 });
