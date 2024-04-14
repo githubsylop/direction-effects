@@ -61,6 +61,7 @@ body {
   animation: scroll var(--_animation-duration, 40s)
     var(--_animation-direction, reverse) linear infinite;
   width: max-content;
+
   /* transform: translate(-50%); */
 }
 
